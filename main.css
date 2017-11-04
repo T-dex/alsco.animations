@@ -1,28 +1,27 @@
-/*media settings*/
-/*@media only screen and (max-width: 1024px) {
-  nav,
-  ul,
-  li {
-    color: white;
-    background: black;
-  }
-}*/
 /* Body css*/
 body {
   margin: 0;
   padding: 0;
+}
+@keyframes scroll {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -400px;
+  }
 }
 nav {
   display: inline-flex;
   padding: 0px;
   text-align: center;
   width: 100%;
+  background: #ddd;
 }
 ul {
   background: #ddd;
 }
 li {
-  border-left: 1px solid black;
   border-right: 1px solid black;
 }
 ul {
@@ -33,7 +32,8 @@ ul {
   width: 100%;
 }
 ul > li {
-  float: left;
+  display: inline-flex;
+  justify-content: center;
   width: 150px;
   height: 65px;
   line-height: 65px;
@@ -134,20 +134,48 @@ li:hover > ul.drop-menu.menu-1 li:nth-child(6) {
   }
 }
 /*Logo css*/
+.right {
+  padding-right: 20px;
+}
 .logo {
+  display: inline-flex;
+  overflow: hidden;
   flex-grow: 2;
+}
+.test {
+  background: black;
+  width: 15px;
+  height: auto;
 }
 .edge {
   list-style: none;
-  text-align: center;
+  flex: 5;
+  padding: 0;
+  margin: 0;
   height: 65px;
   line-height: 65px;
+}
+.test > li {
+  display: inline-flex;
+  justify-content: center;
+  width: 1em;
+  height: 65px;
+  line-height: 65px;
+}
+li.animation {
+  position: relative;
+  background: white;
+  position: relative;
   animation: scroll 10s linear infinite;
   -webkit-animation: scroll 10s linear infinite;
   -moz-animation: scroll 10s linear infinite;
 }
-.logo > li {
-  border: 2px solid red;
+
+ul.test > li {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 10px solid black;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -156,7 +184,12 @@ li:hover > ul.drop-menu.menu-1 li:nth-child(6) {
   li {
     color: white;
     background: black;
-    border-left: 0.5px solid white;
     border-right: 0.5px solid white;
+  }
+  .test {
+    background: white;
+  }
+  ul.test > li {
+    border: 10px solid darkgrey;
   }
 }

@@ -1,7 +1,7 @@
 function shrink() {
+  const grabName = document.getElementsByClassName('animation');
+  console.log(grabName);
   console.log('Wee');
-  const test = document.querySelector('.main');
-  test.classList.add('colorchange');
 }
 
 main.addEventListener('keydown', shrink);
